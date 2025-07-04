@@ -4,8 +4,9 @@ import Image from 'next/image';
 import CallToActionButton from '../UI/CallToActionButton';
 import PackageSelection from '../PackageSelection/PackageSelection';
 
-const VidalyticsVideo = dynamic(() => import('../VidalyticsVideo/VidalyticsVideo'), {
+const Slideshow = dynamic(() => import('../Slideshow/Slideshow'), {
   ssr: false,
+  loading: () => <div className="h-64 bg-gray-200 animate-pulse rounded-lg"></div>,
 });
 
 interface ContentProps {
@@ -23,11 +24,11 @@ const Content: React.FC<ContentProps> = ({
   }, []);
   return (
     <div className="min-h-screen bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
-      <div className="sticky top-0 left-0 right-0 w-full bg-[#2afe4e] text-black text-center py-2 px-4 text-[1.3rem] sm:text-[1.5rem] font-semibold z-50 shadow-md">
-        Introducing the New “Enhanced” Laser Strike Training System
-      </div>
       <div className="w-full max-w-[1240px] mx-auto px-5 py-4 lg:px-20 bg-white">
         <div className="space-y-8">
+          <div className="mt-4 mb-8">
+            <Slideshow />
+          </div>
           <header className="text-center pb-1 -mb-6 md:mb-0 md:pt-8">
             <h1 className="text-xl sm:text-3xl md:text-4xl font-medium leading-snug md:leading-tight mb-0 px-2">
               <div className="font-bold italic">
@@ -39,10 +40,6 @@ const Content: React.FC<ContentProps> = ({
               </div>
             </h1>
           </header>
-
-          <div className="w-full max-w-4xl mx-auto -mt-2 md:mt-0">
-            <VidalyticsVideo />
-          </div>
           <div className="w-full text-center my-8">
             <div className="text-xl md:text-3xl font-bold text-black px-4">
               <span className="bg-[#ff0] px-1 py-1 md:px-2 md:py-1 italic leading-normal">
