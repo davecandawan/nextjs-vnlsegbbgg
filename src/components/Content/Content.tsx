@@ -3,6 +3,8 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import CallToActionButton from '../UI/CallToActionButton';
 import PackageSelection from '../PackageSelection/PackageSelection';
+import AddToCartButton from '../AddToCartButton/AddToCartButton';
+import { primaryFont, interRegular } from '@/app/fonts';
 
 const Slideshow = dynamic(() => import('../Slideshow/Slideshow'), {
   ssr: false,
@@ -24,100 +26,210 @@ const Content: React.FC<ContentProps> = ({
   }, []);
   return (
     <div className="min-h-screen bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
-      <div className="w-full max-w-[1240px] mx-auto px-5 py-4 lg:px-20 bg-white">
-        <div className="space-y-8">
-          <div className="mt-4 mb-8">
-            <Slideshow />
+      <div className="w-full bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
+        <div className="w-full max-w-[1240px] mx-auto pt-5 lg:px-20 bg-white">
+          <Slideshow />
+        </div>
+      </div>
+      <div className="w-full max-w-[1240px] mx-auto px-5 py-1 lg:px-20 bg-white">
+        <div className="space-y-2">
+          <div className="mt-1 mb-8">
+            <div className="mt-1">
+              <AddToCartButton />
+            </div>
           </div>
-          <header className="text-center pb-1 -mb-6 md:mb-0 md:pt-8">
-            <h1 className="text-xl sm:text-3xl md:text-4xl font-medium leading-snug md:leading-tight mb-0 px-2">
-              <div className="font-bold italic">
-                The Most FUN, Affordable, and Easy Way to{' '}
-                <span className="underline">Boost Draw Speed & Accuracy In Minutes!</span>
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-1">
+              <div className="flex-shrink-0">
+                <Image
+                  src="/contentimages/reviewstars.webp"
+                  alt="5 star rating"
+                  width={114}
+                  height={20}
+                  className="w-[85px] sm:w-[114px] h-auto inline-block"
+                />
               </div>
-              <div className="italic text-center text-base sm:text-xl md:text-4xl mt-1 whitespace-nowrap">
-                (With $0 Spent On Ammo Or Range Time)
+              <span className="font-semibold text-lg sm:text-2xl whitespace-nowrap">
+                116 Reviews
+              </span>
+            </div>
+            <div className="bg-[#f7f2f2] py-2 sm:py-2 sm:px-6 inline-block text-[13px] sm:text-2xl whitespace-nowrap overflow-x-auto w-full sm:w-auto">
+              <span className="inline-flex items-center">
+                <span className="mr-1">✨</span>
+                <strong>
+                  <span className="hidden sm:inline">Highly rated by customers for: </span>
+                  <span className="sm:hidden">Highly rated by customers for: </span>
+                  <u>ease of use</u>, <u>quality</u>
+                </strong>
+              </span>
+            </div>
+          </div>
+          {/* Testimonial Section */}
+          <div className="max-w-4xl mx-auto mb-8 p-4 bg-[#f9f9f9] rounded-lg shadow-sm border border-[#ddd]">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+              <div className="relative">
+                <div className="relative w-14 h-14 sm:w-16 sm:h-16">
+                  <Image
+                    src="/contentimages/testimonialLSSHolsterMobilesize.avif"
+                    alt="Don T."
+                    fill
+                    className="rounded-full object-cover"
+                    sizes="(max-width: 768px) 56px, 64px"
+                  />
+                </div>
+                <div className="absolute -bottom-1 -right-1 bg-[#2f78c9] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                  ✓
+                </div>
+              </div>
+              <div className="text-center sm:text-left min-w-[120px]">
+                <div className="font-bold">Don T.</div>
+                <div className="text-[13px] text-gray-600 mb-2">Verified Buyer</div>
+              </div>
+              <div className="text-center sm:text-left">
+                <div className="text-lg font-semibold mb-2">Top Review</div>
+
+                <div className="text-yellow-400 text-xl">★★★★★</div>
+
+                <h3 className="font-semibold text-lg mb-2">
+                  I've already saved $100s in ammo and range time!
+                </h3>
+
+                <span className="text-[15px] text-gray-600 leading-tight block">
+                  "It's a fantastic tool for improving trigger control. The setup is simple and
+                  helps refine each shot. It's a cost-effective way to train without wasting ammo.
+                  Highly recommended for anyone serious about honing their shooting skills!"
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="w-full md:w-[85%] mx-auto max-w-[1120px] py-5 px-0">
+            <Image
+              src="/contentimages/BlockImage1Desktop.webp"
+              alt="Laser Strike System"
+              className="w-full h-auto"
+              width={1120}
+              height={600}
+              priority
+            />
+          </div>
+          <header className="text-center pb-1 -mb-6 md:mb-0 md:pt-1">
+            <h1 className="text-3xl sm:text-3xl md:text-[42px] font-medium leading-[1] md:leading-tight mb-0 px-2">
+              <div className="font-jawbreak">Love It Or You Don't Pay A Dime!</div>
+            </h1>
+          </header>
+          <div className="mt-1 mb-8">
+            <div className="mt-1">
+              <AddToCartButton />
+            </div>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="w-full max-w-4xl mx-auto my-6 px-4 py-5">
+            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4">
+              <div className="w-[100px] sm:w-[140px] h-auto aspect-[140/120] relative">
+                <Image
+                  src="/contentimages/VNSH_MONEY-BACK.webp"
+                  alt="Money Back Guarantee"
+                  fill
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div className="w-[120px] sm:w-[165px] h-auto aspect-[165/120] relative">
+                <Image
+                  src="/contentimages/VNSH_SECURE-CHECKOUT.webp"
+                  alt="Secure Checkout"
+                  fill
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div className="w-[120px] sm:w-[170px] h-auto aspect-[170/120] relative">
+                <Image
+                  src="/contentimages/VNSH_aMERICAN.webp"
+                  alt="American Made"
+                  fill
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div className="w-[120px] sm:w-[170px] h-auto aspect-[170/120] relative">
+                <Image
+                  src="/contentimages/VNSH_FAST-SHIP.webp"
+                  alt="Fast Shipping"
+                  fill
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          <header className="text-center pb-1 -mb-6 md:mb-0 md:pt-1">
+            <h1 className="text-3xl sm:text-3xl md:text-[42px] font-medium leading-[1] md:leading-tight mb-4 px-2">
+              <div className="font-jawbreak">
+                Why This System Ensures You{' '}
+                <span className="text-[#ff0000] underline">
+                  Make The One Shot You Can't Afford To Miss
+                </span>
               </div>
             </h1>
           </header>
-          <div className="w-full text-center my-8">
-            <div className="text-xl md:text-3xl font-bold text-black px-4">
-              <span className="bg-[#ff0] px-1 py-1 md:px-2 md:py-1 italic leading-normal">
-                Plus a "Virtual Steel" Target You Can Ring All Day to
-                <br className="hidden md:block" /> Your Heart's Content!
-              </span>
-            </div>
-          </div>
-
-          <div className="text-center my-8">
-            <CallToActionButton onClick={scrollToPackages} />
-          </div>
-
-          <header className="text-center py-1">
-            <span className="text-[25px] md:text-[36px] font-bold leading-tight md:leading-[1.2] text-[#f16500]">
-              The Simplest Way to <span className="text-red-600">Get DEAD Accurate FAST…</span>
-            </span>
-          </header>
-          <div className="w-full text-center my-2">
-            <div className="text-[22px] md:text-2xl font-bold text-black px-1 py-1 inline-block">
-              <span className="bg-[#ff0] py-1 italic">(From the Comfort of Your Living Room!)</span>
-            </div>
-          </div>
-          <div className="space-y-4 text-xl leading-tight md:text-2xl">
-            <p>Question for you…</p>
+          <div className="space-y-4 text-xl leading-tight md:text-xl font-inter">
             <p>
-              Wouldn't you love to know that{' '}
-              <span className="font-bold italic">every time you draw and shoot your gun</span>,{' '}
-              <u>you'll hit exactly what you're aiming for?</u>
-            </p>
-            <p>Over and over again… with lightning-fast speed?</p>
-            <p>
-              The answer should obviously be a huge <span className="font-bold">YES!</span>
+              ✅ <span className="font-bold">Helps Eliminate “Recoil Flinch”:</span> Recoil itself
+              has zero impact on your accuracy. But your anticipation of recoil can have a serious
+              impact. Since the Laser Strike takes recoil out of the equation, you can train
+              yourself to eliminate the “recoil flinch” that plagues so many shooters.
             </p>
             <p>
-              That's every shooter's dream:{' '}
-              <span className="font-bold">to be as deadly accurate and fast as the pros.</span>
-            </p>
-            <p className="font-bold italic inline-block px-1">
-              Here's a little secret…{' '}
-              <span className="bg-[#ff0] py-1">anyone can become that good.</span>
-            </p>
-            <p>The only problems are:</p>
-            <div className="pl-8">
-              <ol className="list-decimal font-bold space-y-2">
-                <li className="pl-2">It's impossible to find enough time to train…</li>
-                <li className="pl-2">
-                  Shooting enough to get that kind of skill is crazy expensive!
-                </li>
-              </ol>
-            </div>
-            <p>
-              That’s where the <span className="underline">new and enhanced</span> VNSH Laser Strike
-              Training System comes in…
-            </p>
-            <p>
-              People already <span className="font-bold">LOVED</span> this system…{' '}
-              <span className="font-bold italic">but we’ve made it even better</span>, so it feels
-              like…
+              🔫 😌 <span className="font-bold">Reduces Firearm Wear-and-Tear:</span> Not only is
+              the Laser Strike guaranteed to be 100% safe for your guns, but it also minimizes
+              overall wear and the frequency with which you need to clean them – since it reduces
+              the amount of live ammo you use.
             </p>
           </div>
-          <header className="text-center py-1 my-6">
-            <span className="text-2xl md:text-4xl font-bold leading-tight md:leading-tight text-[#f16500]">
-              The Closest Thing to a{' '}
-              <span className="text-red-600">"Private Range With Unlimited Free Ammo</span> In Your
-              Garage!
-            </span>
-          </header>
-          <div className="w-full text-center my-2">
-            <div className="text-xl md:text-2xl font-bold text-black px-1 py-1 inline-block">
-              <span className="bg-[#ff0] py-1 italic">
-                Guaranteed Tighter Groups - Or You Don’t Pay a Dime…
-              </span>
-            </div>
-          </div>
-          <div className="w-full md:w-[70%] mx-auto max-w-[1120px] px-4 md:px-0">
+          <div className="w-full md:w-[85%] mx-auto max-w-[1120px] py-5 px-0">
             <Image
-              src="/contentimages/LSS_new_image.webp"
+              src="/contentimages/BlockImage2Desktop.webp"
+              alt="Laser Strike System"
+              className="w-full h-auto"
+              width={1120}
+              height={600}
+              priority
+            />
+          </div>
+          <div className="space-y-4 text-xl leading-tight md:text-xl font-inter">
+            <p>
+              🔄 <span className="font-bold">Works With a Wide Range of Firearms:</span> If your gun
+              shoots 9MM, .45 ACP, .40 S&W, and .380 ACP, then it will work with the Laser Strike.
+              Just be sure to select the appropriate caliber when placing your order.
+            </p>
+            <p>
+              🛡️ <span className="font-bold">100% Safe (and Quiet) for Home Use:</span> After
+              ensuring your gun is fully unloaded and contains nothing but the laser cartridge, the
+              Laser Strike lets you safely practice around friends and family with zero worry.
+            </p>
+          </div>
+          <div className="w-full md:w-[85%] mx-auto max-w-[1120px] py-5 px-0">
+            <Image
+              src="/contentimages/BlockImage3Desktop.webp"
+              alt="Laser Strike System"
+              className="w-full h-auto"
+              width={1120}
+              height={600}
+              priority
+            />
+          </div>
+          <div className="space-y-4 text-xl leading-tight md:text-xl font-inter">
+            <p>
+              🙌 <span className="font-bold">Incredibly Simple to Setup ANYWHERE:</span> All it
+              takes is 5 yards of space and 5 minutes of prep to start training anywhere you want!
+            </p>
+          </div>
+          <div className="w-full md:w-[85%] mx-auto max-w-[1120px] px-4 md:px-0">
+            <Image
+              src="/contentimages/BlockImage4Desktop.webp"
               alt="Laser Strike System"
               className="w-full h-auto"
               width={1120}

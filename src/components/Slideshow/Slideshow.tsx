@@ -84,13 +84,13 @@ const Slideshow: React.FC = () => {
   }, []);
 
   if (!isMounted) {
-    return <div className="w-full h-64 bg-gray-200 animate-pulse rounded-lg"></div>;
+    return <div className="w-full h-64 bg-gray-200 animate-pulse"></div>;
   }
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto px-4">
+    <div className="relative w-full max-w-[53rem] mx-auto px-0 sm:px-4">
       {/* Main Slideshow */}
-      <div className="relative w-full overflow-hidden rounded-lg" style={{ maxWidth: '100%' }}>
+      <div className="relative w-full overflow-hidden" style={{ maxWidth: '100%' }}>
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -100,8 +100,9 @@ const Slideshow: React.FC = () => {
               <img
                 src={slide.image}
                 alt={slide.alt}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto max-h-[80vh] object-contain mx-auto"
                 loading="lazy"
+                style={{ maxWidth: '100%' }}
               />
             </div>
           ))}
@@ -124,12 +125,12 @@ const Slideshow: React.FC = () => {
       </div>
 
       {/* Thumbnails */}
-      <div className="flex justify-center space-x-1 sm:space-x-2 md:space-x-3 p-1.5 sm:p-3 w-full overflow-x-auto">
+      <div className="flex justify-center space-x-3 sm:space-x-2 md:space-x-3 p-2 sm:p-2 w-full overflow-x-auto">
         {slides.map((slide, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`flex-shrink-0 w-8 h-6 sm:w-12 sm:h-9 md:w-16 md:h-12 overflow-hidden rounded transition-all bg-transparent p-0 border-0 ${
+            className={`flex-shrink-0 w-8 h-6 sm:w-12 sm:h-9 md:w-16 md:h-12 overflow-hidden transition-all bg-transparent p-0 border-0 ${
               currentSlide === index ? 'ring-1 ring-gray-300' : 'opacity-70 hover:opacity-100'
             }`}
             aria-label={`Go to slide ${index + 1}`}
