@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { inter, primaryFont } from './fonts';
 import '@/styles/globals.css';
+import '@/styles/fonts.css';
 
 export const metadata: Metadata = {
   title: 'VNSH Enhanced Laser Strike + Virtual Steel Target!',

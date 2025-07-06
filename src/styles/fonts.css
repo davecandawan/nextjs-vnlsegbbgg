@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'StratumNo1-Black';
+  src: url('/fonts/stratumno1-black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

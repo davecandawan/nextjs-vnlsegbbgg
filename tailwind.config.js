@@ -44,6 +44,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Arial', 'sans-serif'],
+        stratum: ['StratumNo1-Black', 'sans-serif'],
       },
       fontSize: {
         '2xs': ['0.625rem', { lineHeight: '1rem' }],

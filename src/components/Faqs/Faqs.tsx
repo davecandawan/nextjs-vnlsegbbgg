@@ -14,9 +14,9 @@ interface FaqData {
 
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div className="mb-2.5 rounded-lg overflow-hidden shadow-sm transition-shadow hover:shadow-md">
+    <div className="mb-2.5 overflow-hidden shadow-sm transition-all border-b border-[#3a4050] pb-2">
       <div
-        className="flex justify-between items-center bg-gray-100 p-4 cursor-pointer hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="flex justify-between items-center cursor-pointer"
         onClick={onClick}
         role="button"
         tabIndex={0}
@@ -27,9 +27,16 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) 
           }
         }}
       >
-        <span className="text-blue-600 font-bold text-left text-lg md:text-xl">{question}</span>
+        <div className="flex items-center gap-2">
+          <span className="inline-flex items-center justify-center h-5 w-5 min-w-[1.25rem] rounded-full bg-[#10d467] text-white font-bold text-sm leading-none">
+            ?
+          </span>
+          <span className="text-white font-bold text-left text-base sm:text-lg md:text-[22px] font-stratum">
+            {question}
+          </span>
+        </div>
         <span
-          className="ml-4 text-blue-600 transition-transform duration-200"
+          className="ml-4 text-white transition-transform duration-200 flex-shrink-0"
           style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0)' }}
           aria-hidden="true"
         >
@@ -37,13 +44,14 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) 
         </span>
       </div>
       <div
-        className={`bg-[#f2f2f2] overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 py-4 border-t border-gray-200' : 'max-h-0'}`}
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}
         aria-hidden={!isOpen}
+        style={{ borderTop: isOpen ? 'none' : 'none' }}
       >
         {typeof answer === 'string' ? (
-          <p className="px-4 text-gray-800 leading-relaxed text-lg">{answer}</p>
+          <p className="px-4 text-gray-200 leading-relaxed text-lg py-6">{answer}</p>
         ) : (
-          <div className="px-4 text-gray-800 leading-relaxed text-lg space-y-2">{answer}</div>
+          <div className="px-4 text-gray-200 leading-relaxed text-lg space-y-2">{answer}</div>
         )}
       </div>
     </div>
@@ -97,17 +105,19 @@ const Faqs: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto">
-      <div className="space-y-3">
-        {faqData.map((item, index) => (
-          <FaqItem
-            key={index}
-            question={item.question}
-            answer={item.answer}
-            isOpen={openIndex === index}
-            onClick={() => handleFaqClick(index)}
-          />
-        ))}
+    <div className="w-full bg-[#242833] py-5 px-4">
+      <div className="max-w-5xl mx-auto">
+        <div className="space-y-3">
+          {faqData.map((item, index) => (
+            <FaqItem
+              key={index}
+              question={item.question}
+              answer={item.answer}
+              isOpen={openIndex === index}
+              onClick={() => handleFaqClick(index)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
