@@ -16,7 +16,7 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
         return (
           <>
             <div className="border-b border-gray-200 pb-4 mb-4">
-              <h2 className="text-2xl font-bold text-gray-800">Terms &amp; Disclaimer</h2>
+              <span className="text-2xl font-bold text-gray-800">Terms &amp; Disclaimer</span>
             </div>
             <div className="prose max-w-none text-base">
               <p className="font-semibold m-0 mb-2">Effective Date: January 1st, 2019</p>
@@ -453,7 +453,7 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
         return (
           <>
             <div className="border-b border-gray-200 pb-4 mb-4">
-              <h2 className="text-2xl font-bold text-gray-800">Privacy Policy</h2>
+              <span className="text-2xl font-bold text-gray-800">Privacy Policy</span>
             </div>
             <div className="prose max-w-none space-y-4 text-gray-700">
               <p className="font-semibold">Effective Date: January 1st, 2019</p>
@@ -688,7 +688,7 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
         return (
           <>
             <div className="border-b border-gray-200 pb-4 mb-4">
-              <h2 className="text-2xl font-bold text-gray-800">Shipping Policy</h2>
+              <span className="text-2xl font-bold text-gray-800">Shipping Policy</span>
             </div>
             <div className="prose max-w-none space-y-4 text-gray-700">
               <p className="px-3">
@@ -712,7 +712,7 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
         return (
           <>
             <div className="border-b border-gray-200 pb-4 mb-4">
-              <h2 className="text-2xl font-bold text-gray-800">Returns Policy</h2>
+              <span className="text-2xl font-bold text-gray-800">Returns Policy</span>
             </div>
             <div className="prose max-w-none space-y-4 text-gray-700">
               <p className="px-3">

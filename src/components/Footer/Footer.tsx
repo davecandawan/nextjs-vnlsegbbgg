@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 p-4 pt-20" onClick={closeModal}>
           <div
-            className="bg-[242833] rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto relative p-6 mx-auto"
+            className="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto relative p-6 mx-auto"
             onClick={e => e.stopPropagation()}
           >
             <button

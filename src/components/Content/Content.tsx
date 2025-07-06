@@ -127,9 +127,9 @@ const Content: React.FC<ContentProps> = ({
           </div>
 
           {/* Trust Badges */}
-          <div className="w-full max-w-4xl mx-auto my-6 px-4 py-5">
-            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4">
-              <div className="w-[100px] sm:w-[140px] h-auto aspect-[140/120] relative">
+          <div className="w-full max-w-4xl mx-auto my-6 px-3 py-5">
+            <div className="flex justify-between items-center sm:flex-wrap sm:justify-center sm:gap-4">
+              <div className="w-[22%] sm:w-[140px] h-auto aspect-[140/120] relative">
                 <Image
                   src="/contentimages/VNSH_MONEY-BACK.webp"
                   alt="Money Back Guarantee"
@@ -138,7 +138,7 @@ const Content: React.FC<ContentProps> = ({
                   loading="lazy"
                 />
               </div>
-              <div className="w-[120px] sm:w-[165px] h-auto aspect-[165/120] relative">
+              <div className="w-[24%] sm:w-[165px] h-auto aspect-[165/120] relative">
                 <Image
                   src="/contentimages/VNSH_SECURE-CHECKOUT.webp"
                   alt="Secure Checkout"
@@ -147,7 +147,7 @@ const Content: React.FC<ContentProps> = ({
                   loading="lazy"
                 />
               </div>
-              <div className="w-[120px] sm:w-[170px] h-auto aspect-[170/120] relative">
+              <div className="w-[24%] sm:w-[170px] h-auto aspect-[170/120] relative">
                 <Image
                   src="/contentimages/VNSH_aMERICAN.webp"
                   alt="American Made"
@@ -156,7 +156,7 @@ const Content: React.FC<ContentProps> = ({
                   loading="lazy"
                 />
               </div>
-              <div className="w-[120px] sm:w-[170px] h-auto aspect-[170/120] relative">
+              <div className="w-[24%] sm:w-[170px] h-auto aspect-[170/120] relative">
                 <Image
                   src="/contentimages/VNSH_FAST-SHIP.webp"
                   alt="Fast Shipping"
@@ -224,7 +224,7 @@ const Content: React.FC<ContentProps> = ({
               priority
             />
           </div>
-          <div className="space-y-4 text-xl leading-tight md:text-xl font-inter">
+          <div className="space-y-4 text-xl leading-tight md:text-xl md:py-4 py-4 font-inter">
             <p>
               🙌 <span className="font-bold">Incredibly Simple to Setup ANYWHERE:</span> All it
               takes is 5 yards of space and 5 minutes of prep to start training anywhere you want!
