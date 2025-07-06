@@ -34,7 +34,18 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${primaryFont.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/stratumno1-black.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body className="font-sans">
+        {children}
+      </body>
     </html>
   );
 }

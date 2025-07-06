@@ -4,17 +4,22 @@
 
 @layer base {
   :root {
-    --font-jawbreak: 'Jawbreak-Sans', sans-serif;
+    --font-stratum: 'StratumNo1-Black', sans-serif;
     --font-inter: 'Inter', sans-serif;
     --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     
     /* Apply custom fonts to specific elements */
-    .font-jawbreak {
-      font-family: var(--font-jawbreak);
+    .font-stratum {
+      font-family: var(--font-stratum);
     }
     
     .font-inter {
       font-family: var(--font-inter);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-stratum);
+      font-weight: 900;
     }
     --primary-color: #0a0a0a;
     --secondary-color: #f16500;

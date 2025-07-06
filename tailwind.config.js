@@ -13,6 +13,10 @@ module.exports = {
   },
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        stratum: ['StratumNo1-Black', 'sans-serif'],
+      },
       animation: {
         'custom-pulse': 'custom-pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'fade-in': 'fadeIn 0.5s ease-in-out',

@@ -93,9 +93,9 @@ const Content: React.FC<ContentProps> = ({
 
                 <div className="text-yellow-400 text-xl">★★★★★</div>
 
-                <h3 className="font-semibold text-lg mb-2">
+                <span className="font-semibold text-lg mb-2">
                   I've already saved $100s in ammo and range time!
-                </h3>
+                </span>
 
                 <span className="text-[15px] text-gray-600 leading-tight block">
                   "It's a fantastic tool for improving trigger control. The setup is simple and
@@ -116,8 +116,8 @@ const Content: React.FC<ContentProps> = ({
             />
           </div>
           <header className="text-center pb-1 -mb-6 md:mb-0 md:pt-1">
-            <h1 className="text-3xl sm:text-3xl md:text-[42px] font-medium leading-[1] md:leading-tight mb-0 px-2">
-              <div className="font-jawbreak">Love It Or You Don't Pay A Dime!</div>
+            <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
+              <div className="font-jawbreak uppercase">LOVE IT OR YOU DON'T PAY A DIME!</div>
             </h1>
           </header>
           <div className="mt-1 mb-8">
@@ -169,8 +169,8 @@ const Content: React.FC<ContentProps> = ({
           </div>
 
           <header id="benefits" className="text-center pb-1 -mb-6 md:mb-0 md:pt-1">
-            <h1 className="text-3xl sm:text-3xl md:text-[42px] font-medium leading-[1] md:leading-tight mb-4 px-2">
-              <div className="font-jawbreak">
+            <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-4 px-2">
+              <div className="font-jawbreak uppercase">
                 Why This System Ensures You{' '}
                 <span className="text-[#ff0000] underline">
                   Make The One Shot You Can't Afford To Miss
@@ -241,8 +241,10 @@ const Content: React.FC<ContentProps> = ({
             />
           </div>
           <header className="text-center pt-2 pb-1 -mb-6 md:mb-0 md:pt-4">
-            <h1 className="text-3xl sm:text-3xl md:text-[42px] font-medium leading-[1] md:leading-tight mb-0 px-2">
-              <div className="font-jawbreak">Use IT APP-FREE With Our Digital Steel Target</div>
+            <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
+              <div className="font-jawbreak uppercase">
+                Use IT APP-FREE With Our Digital Steel Target
+              </div>
             </h1>
           </header>
           <div className="w-full md:w-[85%] mx-auto max-w-[1120px] px-0 md:px-0">
@@ -283,8 +285,8 @@ const Content: React.FC<ContentProps> = ({
             />
           </div>
           <header className="text-center pt-2 pb-1 -mb-6 md:mb-0 md:py-4">
-            <h1 className="text-3xl sm:text-3xl md:text-[42px] font-medium leading-[1] md:leading-tight mb-0 px-2">
-              <div className="font-jawbreak">
+            <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
+              <div className="font-jawbreak uppercase">
                 Plus... You're Getting An Iron-Clad, Money-Back Guarantee
               </div>
             </h1>
@@ -334,8 +336,8 @@ const Content: React.FC<ContentProps> = ({
             </div>
 
             <header id="faqs" className="text-center pt-2 pb-1 -mb-6 md:mb-0 md:py-4">
-              <h1 className="text-3xl sm:text-3xl md:text-[42px] font-medium leading-[1] md:leading-tight mb-0 px-2">
-                <div className="font-jawbreak">Frequently Asked Questions</div>
+              <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
+                <div className="font-jawbreak uppercase">Frequently Asked Questions</div>
               </h1>
             </header>
           </div>
