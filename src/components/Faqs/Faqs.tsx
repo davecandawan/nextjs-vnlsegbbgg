@@ -82,7 +82,7 @@ const faqData: FaqData[] = [
   {
     question: 'Q: Does this holster work with slide-mounted optics (Red dots, etc)?',
     answer: (
-      <div>
+      <div className="py-6 space-y-6">
         <p>
           A: It depends, if you are using a single and double action weapon you can manually reset
           the hammer without the need to rerack the slide for a reset. Internally hammer-fired guns
