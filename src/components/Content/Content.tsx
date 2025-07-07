@@ -14,19 +14,7 @@ const Slideshow = dynamic(() => import('../Slideshow/Slideshow'), {
   loading: () => <div className="h-64 bg-gray-200 animate-pulse rounded-lg"></div>,
 });
 
-interface ContentProps {
-  buttonText?: string;
-}
-
-const Content: React.FC<ContentProps> = ({
-  buttonText = 'Give Me My Enhanced Laser Strike System + Virtual Steel Target!',
-}) => {
-  const scrollToPackages = useCallback(() => {
-    const packagesSection = document.getElementById('package-selection');
-    if (packagesSection) {
-      packagesSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, []);
+const Content: React.FC = () => {
   return (
     <div className="min-h-screen bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
       <div className="w-full bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
@@ -81,7 +69,7 @@ const Content: React.FC<ContentProps> = ({
                   />
                 </div>
                 <div className="absolute -bottom-1 -right-1 bg-[#2f78c9] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-                  ✓
+                  <span className="text-[12px] font-extrabold">✓</span>
                 </div>
               </div>
               <div className="text-center sm:text-left min-w-[120px]">

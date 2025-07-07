@@ -49,9 +49,13 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) 
         style={{ borderTop: isOpen ? 'none' : 'none' }}
       >
         {typeof answer === 'string' ? (
-          <p className="px-4 text-gray-200 leading-relaxed text-lg py-6">{answer}</p>
+          <p className="!text-[15px] md:!text-[18px] !px-4 !text-gray-200 !leading-relaxed !py-4">
+            {answer}
+          </p>
         ) : (
-          <div className="px-4 text-gray-200 leading-relaxed text-lg space-y-2">{answer}</div>
+          <div className="!text-[15px] md:!text-[18px] !px-4 !text-gray-200 !leading-relaxed !space-y-1">
+            {answer}
+          </div>
         )}
       </div>
     </div>
@@ -83,12 +87,12 @@ const faqData: FaqData[] = [
     question: 'Q: Does this holster work with slide-mounted optics (Red dots, etc)?',
     answer: (
       <div className="py-6 space-y-6">
-        <p>
+        <p className="!text-[15px] md:!text-[18px] !text-gray-200 !leading-relaxed">
           A: It depends, if you are using a single and double action weapon you can manually reset
           the hammer without the need to rerack the slide for a reset. Internally hammer-fired guns
           like Glocks will require re-racking between each shot.
         </p>
-        <p>
+        <p className="!text-[15px] md:!text-[18px] !text-gray-200 !leading-relaxed">
           If you understand that proper dryfire is not affected with re-racking, this is a non-issue
           and won't be creating any bad habits.
         </p>
