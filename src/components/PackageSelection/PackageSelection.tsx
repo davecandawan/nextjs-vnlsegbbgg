@@ -167,7 +167,7 @@ const PackageSelection: React.FC = () => {
 
             <div className="mt-auto">
               <a
-                href="https://secure.vnsh.com/vnlsegbbgg/advance-checkout"
+                href="https://secure.vnsh.com/vnlsegbbgg/advanced-checkout"
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
