@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 
 const PackageSelection: React.FC = () => {
+  const [isGooglebot, setIsGooglebot] = useState(false);
   const searchParams = useSearchParams();
+
+  useEffect(() => {
+    // This will only run on the client side
+    setIsGooglebot(/Googlebot/i.test(navigator.userAgent));
+  }, []);
 
   const getCheckoutUrl = (baseUrl: string) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -69,7 +75,9 @@ const PackageSelection: React.FC = () => {
         </div>
 
         {/* Ultimate Package */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border-[3px] border-[#a3a0a0] w-[320px] flex flex-col order-1 lg:order-2">
+        <div
+          className={`bg-white rounded-2xl shadow-md overflow-hidden border-[3px] border-[#a3a0a0] w-[320px] flex flex-col order-1 lg:order-2 ${isGooglebot ? 'hidden' : ''}`}
+        >
           <div className="relative w-full h-96 overflow-hidden bg-[#ededed]">
             <Image
               src="/contentimages/LSETUltimateMobile2.webp"
@@ -140,7 +148,9 @@ const PackageSelection: React.FC = () => {
         </div>
 
         {/* Enhanced Package */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-2">
+        <div
+          className={`bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-2 ${isGooglebot ? 'hidden' : ''}`}
+        >
           <div className="relative w-full h-96 overflow-hidden bg-white">
             <Image
               src="/contentimages/LSETEnhancedMobile2.webp"
