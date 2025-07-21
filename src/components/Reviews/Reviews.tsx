@@ -101,9 +101,11 @@ const Reviews = () => {
                       <span className="text-[#ffd700] text-xl">{review.stars}</span>
                     </div>
                   </div>
-                  <span className="font-bold text-black-600 text-lg mb-3 block">{review.date}</span>
+                  <span className="font-bold text-black-600 text-[16px] mb-3 block">
+                    {review.date}
+                  </span>
                 </div>
-                <div className={`text-black-600 text-sm block mt-2 ${review.textClass || ''}`}>
+                <div className={`text-[#555] text-sm block mt-2 ${review.textClass || ''}`}>
                   {review.text}
                 </div>
               </div>
@@ -138,9 +140,11 @@ const Reviews = () => {
                       <span className="text-[#ffd700] text-xl">{review.stars}</span>
                     </div>
                   </div>
-                  <span className="font-bold text-black-600 text-lg mb-3 block">{review.date}</span>
+                  <span className="font-bold text-black-600 text-[16px] mb-3 block">
+                    {review.date}
+                  </span>
                 </div>
-                <div className={`text-gray-800 text-sm block mt-2 ${review.textClass || ''}`}>
+                <div className={`text-[#555] text-sm block mt-2 ${review.textClass || ''}`}>
                   {review.text}
                 </div>
               </div>

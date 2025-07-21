@@ -61,7 +61,7 @@ const Content: React.FC = () => {
                 116 Reviews
               </span>
             </div>
-            <div className="bg-[#f7f2f2] py-2 sm:py-2 sm:px-6 inline-block text-[13px] sm:text-2xl whitespace-nowrap overflow-x-auto w-full sm:w-auto">
+            <div className="bg-[#f7f2f2] py-2 sm:py-2 sm:px-2 inline-block text-[13px] sm:text-2xl whitespace-nowrap overflow-x-auto w-full sm:w-auto">
               <span className="inline-flex items-center">
                 <span className="mr-1">✨</span>
                 <strong>
@@ -86,23 +86,23 @@ const Content: React.FC = () => {
                   />
                 </div>
                 <div className="absolute -bottom-1 -right-1 bg-[#2f78c9] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-                  <span className="text-[12px] font-extrabold">✓</span>
+                  <span className="text-[14px] font-extrabold">✓</span>
                 </div>
               </div>
               <div className="text-center sm:text-left min-w-[120px]">
                 <div className="font-bold">Don T.</div>
-                <div className="text-[13px] text-gray-600 mb-2">Verified Buyer</div>
+                <div className="text-[13px] text-[#555] mb-2">Verified Buyer</div>
               </div>
               <div className="text-center sm:text-left">
-                <div className="text-lg font-semibold mb-2">Top Review</div>
+                <div className="text-lg font-semibold mb-2 font-inter">Top Review</div>
 
                 <div className="text-yellow-400 text-xl">★★★★★</div>
 
-                <span className="font-semibold text-lg mb-2">
+                <span className="font-semibold text-[16px] mb-2 block font-inter">
                   I've already saved $100s in ammo and range time!
                 </span>
 
-                <span className="text-[15px] text-gray-600 leading-tight block">
+                <span className="text-[14px] text-[#555] leading-tight block mt-2 font-inter">
                   "It's a fantastic tool for improving trigger control. The setup is simple and
                   helps refine each shot. It's a cost-effective way to train without wasting ammo.
                   Highly recommended for anyone serious about honing their shooting skills!"
