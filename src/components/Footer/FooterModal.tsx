@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface FooterModalProps {
   modalId: string;
@@ -6,8 +6,47 @@ interface FooterModalProps {
 }
 
 const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
-  // Only render the modal if we have a valid modalId
-  if (!modalId) return null;
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (modalId) {
+      setIsMounted(true);
+      // Small timeout to allow the modal to be added to the DOM before starting the animation
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 10);
+      return () => clearTimeout(timer);
+    } else {
+      setIsVisible(false);
+      // Wait for the animation to complete before unmounting
+      const timer = setTimeout(() => {
+        setIsMounted(false);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [modalId]);
+
+  // Handle body scroll when modal opens/closes
+  useEffect(() => {
+    // Always ensure body is scrollable when this component is mounted
+    document.body.style.overflow = 'auto';
+
+    return () => {
+      // When unmounting, ensure we don't leave any scroll locks
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
+  // Only render the modal if we have a valid modalId or it's in the process of animating out
+  if (!isMounted) return null;
+
+  const handleBackgroundClick = (e: React.MouseEvent) => {
+    if (e.target === modalRef.current) {
+      closeModal();
+    }
+  };
 
   // Function to get the appropriate content based on modalId
   const getModalContent = () => {
@@ -736,7 +775,34 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
     }
   };
 
-  return <div className="p-6">{getModalContent()}</div>;
+  return (
+    <div
+      ref={modalRef}
+      onClick={handleBackgroundClick}
+      className={`fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center p-4 pt-20 transition-opacity duration-300 ${
+        isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}
+    >
+      <div
+        className={`bg-white rounded-lg max-w-6xl w-full max-h-[100vh] overflow-y-auto relative transform transition-all duration-300 ease-out ${
+          isVisible ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
+        }`}
+        style={{
+          pointerEvents: 'auto',
+          marginBottom: '20px', // Add some space at the bottom
+        }}
+      >
+        <button
+          className="absolute top-4 right-4 text-2xl text-gray-500 hover:bg-transparent focus:outline-none bg-transparent border-none p-0 cursor-pointer hover:opacity-80"
+          onClick={closeModal}
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <div className="p-6">{getModalContent()}</div>
+      </div>
+    </div>
+  );
 };
 
 export default FooterModal;
