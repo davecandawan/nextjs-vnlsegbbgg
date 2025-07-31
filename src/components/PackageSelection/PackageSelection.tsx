@@ -92,22 +92,21 @@ const PackageSelection: React.FC = () => {
               <span className="text-5xl font-bold text-black">$199</span>
               <span className="text-[#ff0000] text-lg font-bold">+ Free S&H</span>
             </div>
-            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $290</div>
+            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $190</div>
+            <div className="text-black text-center mb-0 text-xl">(Pick Your Calibers)</div>
             <div className="mb-4 -ml-6">
               <ul className="list-none p-0 m-0">
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
                   <span className="text-white mr-2 text-base">+</span>
-                  <span className="text-[15px]">
-                    All Calibers <span className="text-sm">(9mm, .380, .40 & .45)</span>
-                  </span>
+                  <span className="text-base">FREE 2 MagMates</span>
                 </li>
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
                   <span className="text-white mr-2 text-base">+</span>
-                  <span className="text-base">FREE - 2 MagMates</span>
+                  <span className="text-base">Extra Laser Cartridge</span>
                 </li>
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded">
                   <span className="text-white mr-2 text-base">+</span>
-                  <span className="text-base">3 Extra "Virtual Steel" Targets</span>
+                  <span className="text-base">2 Extra "Virtual Steel" Targets</span>
                 </li>
               </ul>
             </div>
@@ -162,11 +161,11 @@ const PackageSelection: React.FC = () => {
           </div>
           <div className="pt-0 px-4 pb-4 flex-grow flex flex-col bg-white">
             <div className="flex justify-center items-center gap-2">
-              <span className="text-5xl font-bold text-black">$159</span>
+              <span className="text-5xl font-bold text-black">$169</span>
               <span className="text-[#ff0000] text-lg font-bold">+ Free S&H</span>
             </div>
-            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $110</div>
-            <div className="text-black text-center mb-4 text-xl">(Pick Your Calibers)</div>
+            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $100</div>
+            <div className="text-black text-center mb-0 text-xl">(Pick Your Calibers)</div>
             <div className="mb-4 -ml-6">
               <ul className="list-none p-0 m-0">
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
